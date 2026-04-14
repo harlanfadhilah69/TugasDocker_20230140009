@@ -1,0 +1,97 @@
+/* Pengaturan Umum */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    margin: 0; /* Diubah menjadi 0 untuk mendukung pemusatan layar penuh */
+    color: #333;
+
+    /* Konfigurasi Flexbox untuk memusatkan konten */
+    display: flex;
+    flex-direction: column; /* Mengatur arah aliran dari atas ke bawah */
+    justify-content: center; /* Memusatkan secara vertikal */
+    align-items: center;     /* Memusatkan secara horizontal */
+    min-height: 100vh;       /* Mengambil tinggi penuh layar browser */
+}
+
+/* Judul */
+h1, h2, h3 {
+    color: #2c3e50;
+    margin-top: 0;
+}
+
+/* Pengaturan Tabel [cite: 78, 80-84] */
+table {
+    width: 90%; /* Memberikan sedikit ruang di pinggir saat di halaman Home */
+    max-width: 1000px;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Pengaturan Form & Input [cite: 85-90] */
+form {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px; /* Lebar maksimal kotak agar proporsional di tengah */
+}
+
+input[type="text"], input[type="password"], select {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0 16px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Tombol Biru [cite: 73] */
+button, input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%; /* Membuat tombol selebar kotak input */
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Link Navigasi */
+a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: 500;
+    margin-top: 15px;
+    display: inline-block;
+}
+
+a:hover {
+    text-decoration: underline;
+}
