@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Form Input</title>
+    <link rel="stylesheet" th:href="@{/static.css}">
+</head>
+<body>
+<h2>Form Input Mahasiswa</h2>
+<form th:action="@{/save}" th:object="${user}" method="post">
+    <div>
+        <label>Nama:</label><br/>
+        <input type="text" th:field="*{nama}" required />
+    </div>
+    <br/>
+    <div>
+        <label>NIM:</label><br/>
+        <input type="text" th:field="*{nim}" required />
+    </div>
+    <br/>
+    <div>
+        <label>Jenis Kelamin:</label><br/>
+        <input type="radio" th:field="*{jenisKelamin}" value="Laki-laki"/> Laki-laki
+        <input type="radio" th:field="*{jenisKelamin}" value="Perempuan"/> Perempuan
+    </div>
+    <br/>
+    <button type="submit">Submit</button>
+</form>
+<br/>
+<a th:href="@{/home}">Kembali ke Home</a>
+</body>
+</html>
