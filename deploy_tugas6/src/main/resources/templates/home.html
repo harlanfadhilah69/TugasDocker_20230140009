@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" th:href="@{/static.css}">
+</head>
+<body>
+<h1>MY Website 20230140009</h1>
+<p>Selamat datang di aplikasi!</p>
+
+<a th:href="@{/form}"><button>Input Data Mahasiswa</button></a>
+<br/><br/>
+
+<h3>Data Mahasiswa</h3>
+<table border="1">
+    <thead>
+    <tr>
+        <th>No</th>
+        <th>Nama</th>
+        <th>NIM</th>
+        <th>Jenis Kelamin</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="mhs, iterStat : ${listMhs}">
+        <td th:text="${iterStat.count}"></td>
+        <td th:text="${mhs.nama}"></td>
+        <td th:text="${mhs.nim}"></td>
+        <td th:text="${mhs.jenisKelamin}"></td>
+    </tr>
+    <tr th:if="${#lists.isEmpty(listMhs)}">
+        <td colspan="4" style="text-align: center;">Belum ada data</td>
+    </tr>
+    </tbody>
+</table>
+<br/>
+<a th:href="@{/}">Logout</a>
+</body>
+</html>
